@@ -1,0 +1,13 @@
+node_modules
+dist
+build
+.git
+.gitignore
+coverage
+test-results
+.playwright
+reports
+api/node_modules
+api/dist
+**/.DS_Store
+

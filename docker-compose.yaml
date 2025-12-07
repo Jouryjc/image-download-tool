@@ -1,0 +1,33 @@
+version: '3.9'
+services:
+  backend:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    image: image-download-tool-backend:latest
+    environment:
+      NODE_ENV: production
+      PORT: 3001
+      FRONTEND_URL: http://localhost:8080
+    ports:
+      - "3001:3001"
+    volumes:
+      - downloads_data:/app/downloads
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+      args:
+        VITE_API_URL: http://localhost:3001/api
+    image: image-download-tool-frontend:latest
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  downloads_data:
+

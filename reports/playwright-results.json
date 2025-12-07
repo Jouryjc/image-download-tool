@@ -1,0 +1,264 @@
+{
+  "config": {
+    "configFile": "/Users/yjcjour/code/image-download-tool/playwright.config.ts",
+    "rootDir": "/Users/yjcjour/code/image-download-tool/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 3
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/yjcjour/code/image-download-tool/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 3
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/yjcjour/code/image-download-tool/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.57.0",
+    "workers": 5,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "download-flow.spec.ts",
+      "file": "download-flow.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "创建下载任务并在下载页展示",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5470,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('下载管理')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('下载管理')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('下载管理')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('下载管理')\u001b[22m\n\n    at /Users/yjcjour/code/image-download-tool/e2e/download-flow.spec.ts:15:40",
+                    "location": {
+                      "file": "/Users/yjcjour/code/image-download-tool/e2e/download-flow.spec.ts",
+                      "column": 40,
+                      "line": 15
+                    },
+                    "snippet": "  13 |\n  14 |   await page.goto('/download');\n> 15 |   await expect(page.getByText('下载管理')).toBeVisible();\n     |                                        ^\n  16 |   // 简单检查任务列表API可用\n  17 |   const listRes = await request.get('http://localhost:3001/api/downloads');\n  18 |   expect(listRes.status()).toBe(200);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/yjcjour/code/image-download-tool/e2e/download-flow.spec.ts",
+                        "column": 40,
+                        "line": 15
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('下载管理')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('下载管理')\u001b[22m\n\n\n  13 |\n  14 |   await page.goto('/download');\n> 15 |   await expect(page.getByText('下载管理')).toBeVisible();\n     |                                        ^\n  16 |   // 简单检查任务列表API可用\n  17 |   const listRes = await request.get('http://localhost:3001/api/downloads');\n  18 |   expect(listRes.status()).toBe(200);\n    at /Users/yjcjour/code/image-download-tool/e2e/download-flow.spec.ts:15:40"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-12-06T15:35:28.730Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/yjcjour/code/image-download-tool/test-results/download-flow-创建下载任务并在下载页展示/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/yjcjour/code/image-download-tool/test-results/download-flow-创建下载任务并在下载页展示/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/yjcjour/code/image-download-tool/e2e/download-flow.spec.ts",
+                    "column": 40,
+                    "line": 15
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "68981d98b4f8e86645cb-7791d11b97f113f3adac",
+          "file": "download-flow.spec.ts",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "perf.spec.ts",
+      "file": "perf.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "并发创建与模拟5个下载任务直至完成",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1096,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[perf] 5并发下载完成耗时: 1075ms\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-12-06T15:35:28.731Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "73ed389be8d3d6a89cdb-d6a132fbf369e411d4e1",
+          "file": "perf.spec.ts",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "smoke.spec.ts",
+      "file": "smoke.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "首页加载与基本元素存在",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "failed",
+                  "duration": 5419,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('容器镜像下载器')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('容器镜像下载器')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('容器镜像下载器')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('容器镜像下载器')\u001b[22m\n\n    at /Users/yjcjour/code/image-download-tool/e2e/smoke.spec.ts:8:43",
+                    "location": {
+                      "file": "/Users/yjcjour/code/image-download-tool/e2e/smoke.spec.ts",
+                      "column": 43,
+                      "line": 8
+                    },
+                    "snippet": "   6 | test('首页加载与基本元素存在', async ({ page }) => {\n   7 |   await page.goto('/');\n>  8 |   await expect(page.getByText('容器镜像下载器')).toBeVisible();\n     |                                           ^\n   9 | });\n  10 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/yjcjour/code/image-download-tool/e2e/smoke.spec.ts",
+                        "column": 43,
+                        "line": 8
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('容器镜像下载器')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('容器镜像下载器')\u001b[22m\n\n\n   6 | test('首页加载与基本元素存在', async ({ page }) => {\n   7 |   await page.goto('/');\n>  8 |   await expect(page.getByText('容器镜像下载器')).toBeVisible();\n     |                                           ^\n   9 | });\n  10 |\n    at /Users/yjcjour/code/image-download-tool/e2e/smoke.spec.ts:8:43"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-12-06T15:35:28.730Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/yjcjour/code/image-download-tool/test-results/smoke-首页加载与基本元素存在/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/yjcjour/code/image-download-tool/test-results/smoke-首页加载与基本元素存在/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/yjcjour/code/image-download-tool/e2e/smoke.spec.ts",
+                    "column": 43,
+                    "line": 8
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "4219922fea2e2bd3c691-f99ebe696606b2d8069f",
+          "file": "smoke.spec.ts",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-12-06T15:35:28.215Z",
+    "duration": 6246.014,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}
